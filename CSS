@@ -3,10 +3,69 @@
     property: value
  }
  
- 2. where to put style, better in the style tag
+2. where to put style, better in the style tag
  how to sepearte CSS and HTML?
  --use the <link> tag
  A. hexadecimal color system
  #000000 black (RGB for each 2 letters)
  B.RGB sys  rgb(0,255,0) --green
  C.RGBA rgb +tansparency (from 0.0-1.0) rgba (11,99,150,0.5)
+
+3.backgroun and border
+border: color, width, style
+background: url, repeat, size(cover)
+
+4.css selector
+use id as the hook!
+<li id="special">
+		<input type="checkbox">
+		Finish Recording CSS Videos
+	</li>
+ each id can only show up once! ( you can't have another special
+ 
+ --- in the css file (#)
+   #special{
+	    background: yellow;
+   }
+
+class : can apply to an elements in a page
+	<li class="completed">
+		<input type="checkbox" checked>
+		Walk Rusty
+	</li>
+	<li class="completed">
+		<input type="checkbox" checked>
+		Buy Groceries
+	</li>
+--- in the css file (.)
+.completed {
+	text-decoration: line-through;
+}
+
+//text-decoration: line-through; (have many choice)
+
+// google chrome inspector -- can check stuff! check it! good! can check your stuff and learn from other webs
+
+# the 30 CSS selectors you must memorize (more selectors than class and id)
+
+/* -all/
+/decendenct 
+ul li a {
+
+}
+/adjacent selector
+h4+ul {
+}
+
+/attribute selector
+a[href= " http:// www.google.com"] {
+}
+input[type = "checkbox"] {
+}
+
+
+/nth of type
+
+ul: nth-of-tyoe(even){
+}
+

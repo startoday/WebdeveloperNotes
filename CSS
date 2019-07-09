@@ -42,8 +42,6 @@ class : can apply to an elements in a page
 	text-decoration: line-through;
 }
 
-//text-decoration: line-through; (have many choice)
-
 // google chrome inspector -- can check stuff! check it! good! can check your stuff and learn from other webs
 
 # the 30 CSS selectors you must memorize (more selectors than class and id)
@@ -81,3 +79,10 @@ usually id is the most specific
 
 li < li a < li +a < .hello = input[type = "text"] < #spec
 
+
+6.font stuff
+em size : dynamic, depends on parents! (几倍）
+font : 100(lightest) -700 (heavier)
+line-height :1.5  /2 --类似行间距
+text-align:right, center....
+text-decoration: line-through; (have many choice)

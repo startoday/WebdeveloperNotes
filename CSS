@@ -1,0 +1,12 @@
+1. general rule:
+ selector{
+    property: value
+ }
+ 
+ 2. where to put style, better in the style tag
+ how to sepearte CSS and HTML?
+ --use the <link> tag
+ A. hexadecimal color system
+ #000000 black (RGB for each 2 letters)
+ B.RGB sys  rgb(0,255,0) --green
+ C.RGBA rgb +tansparency (from 0.0-1.0) rgba (11,99,150,0.5)

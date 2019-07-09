@@ -3,3 +3,18 @@
   CSS: Cascading style sheets
  --defines the style of HTML/ "adjectives" of a webpage
 JavaScript: add logic and interacting to a page
+
+2. Your query is submitted to your ISP,
+within your ISP, the DNS takes the Domain name and turn it to a IP address
+
+static page vs dynamic page (like google news)
+
+#codepen - a online editor you can check you page easyily
+#MDN:resources for  HTML, CSS, and JS
+
+3. HTML 
+<tagName> Some Content </tageName>
+one head with one body
+head(things people don't see on the page
+<!--comment-->  (cmd + slash(/))
+h1(most important)---h6   (h stands for heading)

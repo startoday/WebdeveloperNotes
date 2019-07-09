@@ -69,3 +69,15 @@ input[type = "checkbox"] {
 ul: nth-of-tyoe(even){
 }
 
+
+5.inheritance and specificity in CSS
+you have ul and li, when you change ul , li is also changed, since li is in ul
+when you set parent, the child will also change
+
+the more/specific close one wins!
+MDN tells you how to pick (runs a calculation)
+--specificty calculator
+usually id is the most specific
+
+li < li a < li +a < .hello = input[type = "text"] < #spec
+

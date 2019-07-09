@@ -85,4 +85,56 @@ bullet point type
 </table>
 
 
+8.HTML forms
+<form> is like a container
+-action : the url to send form data to
+-method: the type of HTTP request
+method :"get" for retriving data, such as searching, not change things in database ; "post" to add it to a data base
+
+<input> what to put in the box
+
+<h1>Sign In</h1>
+
+<form action="/sign-in-url" method = "post">
+	<input type="text" name="">
+	<input type="password" name="">
+	<button>Login</button>
+</form>
+
+<form> is also a block tag
+
+9.HTML label
+use for and id ,if there are matched then can knock them down (connect them)
+
+
+10. form validations
+(check if your input is follow the requirement)
+加上required --- 存在的要求！不能提交空表格
+can also check if it is a email, etc, certain specifc requirement
+
+<input type="radio" name=""> <!-- only one choice -->
+<input type="checkbox" name="">  <!-- can check it or not -->
+
+
+<form> <!-- 给same name 就可以只选择一个了 -->
+	<label for = "dogs"> Dogs:</label>
+	<input id = "dogs" type="radio" name="petChoice"
+	value="DOGS">
+	<label for = "cats"> Cats:</label>
+	<input id = "cats" type="radio" name="petChoice"
+	value="CATS">
+  <p>what's your favorite food </p>
+	<select name = "food">  //要有name在上面才能显示提交的改变，value确定的是返回值
+		<option>rice</option>
+		<option>ramen</option>
+	</select>
+	<button>Check！</button> <!-- 如果button是最后一个的话会自动提交 -->
+</form>
+
+
+
+
+
+
+
 

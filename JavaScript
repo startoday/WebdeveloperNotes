@@ -301,3 +301,54 @@ var otherNums = nums.slice();
 //both arrays are [1,2,3]
 
 
+12. array iteration
+for loop by size
+forEach(some function)
+var colors = ["red", "orange","yellow", "green"];)
+//this example passed a lambda function
+colors.forEach(function(colorHolder){
+//color is a placeholder, call it whatever you want
+  console.log(colorHolder);
+});
+
+function printColor(sth) {
+    console.log(sth);
+}
+colors.forEach(printColor);
+###注意不可以带funtion call 的（） -- 这样JS会先run function，
+##只需要传function名字
+
+forEach function you can have three arguments (1.ele, 2.index 3. arr)
+//delet the x total elements start from index
+array.splice(index,x)
+
+#write our own forEach()：
+// =========
+// VERSION 1
+// =========
+function myForEach(arr, func){
+	for (var i = 0; i < arr.length; i++) {
+		func(arr[i]);
+	}
+}
+
+var colors = ["red", "orange", "yellow", "green", "blue", "PURPLE"];
+myForEach(colors, function(color){
+	console.log(color);
+});
+
+// =========
+// VERSION 2 
+// =========
+Array.prototype.myForEach = function(func){
+  for(var i = 0; i < this.length; i++) {
+   func(this[i]); //this refers to the specific array who is calling on
+  }
+};
+
+var colors = ["red", "orange", "yellow", "green", "blue", "PURPLE"];
+colors.myForEach(function(color){
+	console.log(color);
+});
+
+13.JS objects

@@ -86,3 +86,35 @@ font : 100(lightest) -700 (heavier)
 line-height :1.5  /2 --类似行间距
 text-align:right, center....
 text-decoration: line-through; (have many choice)
+
+
+
+7. box model!
+content
+/*Content - Width and Height*/
+
+width: 50%; /*-- this will change based on window*/
+padding
+border
+margin
+/*margin: 100px;*/
+/*margin-top: 500px;*/
+/*margin: 20px 40px 500px 100px;*/ (top, right, bottom. left)
+/*margin: 0 auto 0 auto;*/ *auto-- center
+margin: 0 auto;
+margin: 50px 20px;
+
+8. float
+make it float to the same line instead of different lines
+float:left -- also make the white space browser gave us and set our own margin
+
+text-transform: uppercase; make things all upper case
+
+body {
+  width: 80%;
+  max-width: 700px; //可以70的时候一直70 
+}
+cmd + click can choose multiple lines to click
+
+<hr>  #give you a horizontally line, and can also modify it 
+letter-spacing :10 rem #rem is based on root, instead of the parent

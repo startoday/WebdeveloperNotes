@@ -215,6 +215,10 @@ call : capitalize(str);
 
 str.replace(/-/g, "newchar"); will return a new copy! not inplace~
 
+setInterval(sing, 50) //例子是可以传另一个 function的。
+486 //会return一个值让你stop
+clearInterval(486); //传这个值才行
+setInterval(function(){ define a function only use once -like lambda}, 50)
 
 9.scope
 scope is the context that code is executed in

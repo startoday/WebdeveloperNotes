@@ -1,0 +1,17 @@
+1. five primitive data types
+//Numbers -- don't care float or int or negative numvers 
+4
+9.3
+-10
+
+//Strings  --- stuff inside " " 
+"Hello World"
+"43"
+
+//Booleans
+true
+false
+
+//null and undefined
+null
+undefined

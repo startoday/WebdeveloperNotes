@@ -1,2 +1,40 @@
 1.#what is bootstrap
 a packed stuff of css, js etc
+
+2. 
+jumbotron, a container
+form -group can group stuffs together (the space will be different
+form -control make it bootstrap control 
+form-inline (make it in one line)
+
+
+3. nav bar
+navbar header
+li: the things which will be on the nav bar
+<ul class="nav navbar-nav navbar-right"> give a one on the right
+
+for the drag down have to add bootstrap JS and JQuery
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+<div class="collapse navbar-collapse" id="bs-nav-demo">
+what is under it will be collapse when shrink the window
+
+
+#data-target="#bs-exampl 注意这行加了# for id，下面对应的不加
+<!-- DEFAULT NAVBAR -->
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>

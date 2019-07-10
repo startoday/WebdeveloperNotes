@@ -74,3 +74,13 @@ currentPlayer = null;   //game over
 
 
 3.built- in methods
+//comments
+
+clear(): clear the console
+alert("some message")  # give you an annoying pop up!
+console.log() #print sth to the console
+prompt("give me some input") # ask input from user with a pop
+    sayStuff = prompt("say");
+    "hi"
+    sayStuff
+    "hi"

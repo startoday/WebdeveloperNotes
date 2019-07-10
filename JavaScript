@@ -213,6 +213,20 @@ var capitalize = function(str) {
 }
 call : capitalize(str);
 
+str.replace(/-/g, "newchar"); will return a new copy! not inplace~
+
+
+9.scope
+scope is the context that code is executed in
+when difine out side a function, the function can still use it (like a globle),
+if you change the y, then it will also change the outside y
+var ph = "hi"
+function doSth(){
+    ph = "good"
+    console.log(ph)
+}
+doSth()--good
+ph -- good
 
 
 

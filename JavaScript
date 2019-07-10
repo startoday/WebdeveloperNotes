@@ -27,13 +27,14 @@
     "Singin \"Do wah diddy, diddy, dum diddy do\" "
     "This is a backslash: \\"
 
-    //Strings have a length property
+    //Strings have a length property -- include all char(white space), no end '\n' stuff counted
     "hello world".length  //11
 
     //Access individual characters using [] and an index
     "hello"[0]  //"h"
     "hello"[4]  //"o"
-
+ ##   5%3 (not 4!!!) -->2 
+"hello".length % "hi\\".length
 
 //Booleans
 true
@@ -42,3 +43,34 @@ false
 //null and undefined
 null
 undefined
+
+
+2. right now just put ; at the end, later will talk about styles and conventions
+//Variables are simply containers that store values
+//They can store all of the values we've seen
+var name = "Rusty";
+var secretNumber = 73;
+var isAdorable = true;
+//Recall the stored value by calling the variable name
+var name = "Rusty";
+"hello there " + name    //"hello there Rusty"
+var num = 37;
+num + 3 + 10    //50
+//We can change the stuff and type for var(dynamic type)
+var name = "Robert";
+name = "Bob";
+
+#naming convenstion is camelCase
+
+#The two other primitives are null and undefined
+
+//undefined (just only declared)
+var age
+undefined
+
+//null is "explicitly nothing"
+var currentPlayer = "charlie";
+currentPlayer = null;   //game over
+
+
+3.built- in methods

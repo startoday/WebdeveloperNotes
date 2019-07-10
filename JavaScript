@@ -136,4 +136,39 @@ NaN
 
 6. conditionals
 if ; else if; else
+if(sth) {}
+if(age % Math.sqrt(age) === 0) {
+  console.log("Your age is a perfect square!");
+}
+prompt() will return a string
+we need to cast it to use == sometime
+Number(var) === 
+
+
+7. loops
+DRY: Don't Repeat Yourself
+while(someCondition) {
+  //run some code
+}
+
+var str = "hello";
+var count = 0;    
+while(count < str.length) {
+ console.log(str[count]);
+ count++;
+}
+
+    var str="hello world"
+    str.indexOf("world"); --6
+    str.indexOf("ye"); ---1
+
+
+for(init; condition; step) {
+  //run some code
+}
+for(var count = 0; count < 6; count++) {
+  console.log(count);
+}
+
+8.functions
 

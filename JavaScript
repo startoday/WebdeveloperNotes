@@ -234,3 +234,22 @@ ph -- good
 
 
 
+10. JS arrays
+var friends = ["Charlie", "Liz", "David", "Mattias"];
+friends[1] + " <3 " + friends[2]  //"Liz <3 David"
+//we can update arrays
+friends[0] = "Chuck"; // friends: (4) ["Chuck", "Liz", "David", "Mattias"]
+//add new stuff
+friends[5] = "Amelie";
+friends //(6) ["Chuck", "Liz", "David", "Mattias", empty, "Amelie"]
+
+//We can initialize an empty array two ways:
+var friends = []; //no friends :(
+var friends = new Array() //uncommon
+
+//Arrays can hold any type of data
+var random_collection = [49, true, "Hermione", null];
+
+//Arrays have a length property
+var nums = [45,37,89,24];
+nums.length   //4

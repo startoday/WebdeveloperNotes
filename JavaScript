@@ -75,7 +75,6 @@ currentPlayer = null;   //game over
 
 3.built- in methods
 //comments
-
 clear(): clear the console
 alert("some message")  # give you an annoying pop up!
 console.log() #print sth to the console
@@ -84,3 +83,57 @@ prompt("give me some input") # ask input from user with a pop
     "hi"
     sayStuff
     "hi"
+
+4. link JavaScript files to html:
+put it in the <head>
+<script src="script.js"></script>
+
+
+5. boolean logic
+assign x =5
+(safer to use === somehow)
+== : equal to
+x === "5"  -- true
+
+=== : equal value and type !
+x === "5"  -- false
+
+var y  = null
+undefined
+y == undefined
+true
+y === undefined
+false
+
+!==	Not equal value or equal type	
+x !== "5"	
+--true
+x !== 5
+--false
+
+true == "1"          //true
+0 == false           //true
+null == undefined    //true
+NaN == NaN           //false
+
+
+&&, ||, ! ,short circuting also applies
+
+truthy and falsy
+!NaN true
+!-1
+false
+!!-1
+true
+
+#falsy stuff!
+false 
+0
+""
+null
+undefined
+NaN 
+
+6. conditionals
+if ; else if; else
+

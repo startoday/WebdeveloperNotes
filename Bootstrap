@@ -38,3 +38,27 @@ what is under it will be collapse when shrink the window
       </button>
       <a class="navbar-brand" href="#">Brand</a>
     </div>
+
+
+4. grid system
+当change window 大小的时候图标怎么变化的
+How it works
+Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. 
+Column classes indicate the number of columns you’d like to use out of the possible 12 per row. 
+So, if you want three equal-width columns across, you can use .col-4.
+
+anytime you use bootstrap, put it in a container
+
+      <div class="row">
+        <div class="col-lg-6 orange">FIRST HALF</div>
+        <div class="col-lg-6 orange">OTHER HALF</div>
+      </div>
+      
+      
+  # thumbnail will help you scale down the size to what you want 
+     <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="https://images.unsplash.com/photo-1435771112039-1e5b2bcad966?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450">
+        </div>
+      </div>

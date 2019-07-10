@@ -171,4 +171,48 @@ for(var count = 0; count < 6; count++) {
 }
 
 8.functions
+function doSomething() {
+  console.log("HELLO WORLD");
+}
+doSomething(); //call it
+
+function area(length, width) {
+  console.log(length * width);
+}
+area(9,2); //18
+
+
+##if no return, will return undefined
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+var city = "paris";              //"paris"
+var capital = capitalize(city);  //"Paris"
+
+function greet(person1, person2, person3){
+  console.log("hi " + person1);
+  console.log("hi " + person2);
+  console.log("hi " + person3);
+}
+greet("Harry", "Ron", "Hermione")
+//如果少传了一个， 不会报错，会hi undefind
+greet("Harry", "Ron")
+hi Harry
+VM943:3 hi Ron
+VM943:4 hi undefined
+
+//function declaration
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+//function expression --这种如果你change了capitalize 这个function会丢失！
+var capitalize = function(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+call : capitalize(str);
+
+
+
 

@@ -1,12 +1,39 @@
+
+0.option + cmd + j/i --> develop tools (such as js console)
+
 1. five primitive data types
 //Numbers -- don't care float or int or negative numvers 
 4
 9.3
 -10
+#math
+1/3
+0.3333333333333333
+--remainder
+10%3
+1
 
 //Strings  --- stuff inside " " 
 "Hello World"
 "43"
+    //Single or Double quotes OK --but needs to match!
+    "hello world"
+    'hello world'
+
+    //Concatenation -be in a one string
+    "charlie" + "brown"  //"charliebrown"
+
+    //Escape Characters start with "\"
+    "Singin \"Do wah diddy, diddy, dum diddy do\" "
+    "This is a backslash: \\"
+
+    //Strings have a length property
+    "hello world".length  //11
+
+    //Access individual characters using [] and an index
+    "hello"[0]  //"h"
+    "hello"[4]  //"o"
+
 
 //Booleans
 true

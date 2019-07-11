@@ -1,0 +1,4 @@
+1. what is DOM:
+Document Object Model -the interface between your js and HTML+CSS
+the browser turns every HTML tag into a JS obhect that we can manipulate,
+everything is stored inside of the document object

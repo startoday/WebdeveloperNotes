@@ -362,6 +362,10 @@ Or
 console.log(person.name)
 #you can't use . notation when property starts with a number Or there is space in the property!
 for the variables use [] 
+eg: 
+var pop = "color";
+someObj[prop] = "red";
+//someObj{ color : "red"}
 
 to update, just use these two ways to reassign it 
 objects can also store all types of data
@@ -379,4 +383,18 @@ name:"Traves"
 Or
 var person = new Object();
 person.name = "Traves";
+
+
+14 object methods and keyword this
+just like console.log()
+you can put methods in object,
+can call it like that
+underscore library
+_.reduce()
+
+this can use for the same object
+
+
+
+
 

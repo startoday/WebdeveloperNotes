@@ -3,3 +3,62 @@ Document Object Model -the interface between your js and HTML+CSS
 the browser turns every HTML tag into a JS obhect that we can manipulate,
 everything is stored inside of the document object
 console.dir()
+
+2.DOM select and manipulate
+var h1 = document.querySelector("h1")
+//SELECT the <h1> and save to a variable
+h1.style.color = "pink";
+
+var body = document.querySelector("body"); //SELECT
+var isBlue = false;
+
+setInterval(function(){   //MANIPULATE
+ if (isBlue) {
+   body.style.background = "white";
+ } else {
+   body.style.background = "#3498db";
+ }
+ isBlue = !isBlue;
+}, 1000);
+
+3. selectors
+document.URL;
+document.head;
+document.body;
+document.links;
+*在打开的网页上操作，就是当前网页哈
+document.getElementById()
+Takes a string argument and returns the one element with a matching ID
+var tag = document.getElementById("highlight");
+**by ID
+-------
+document.getElementsByClassName()
+var tags = document.getElementsByClassName("bolded");
+console.log(tags[0]);
+**by class name
+if multiple, will be stored in a list
+(a node list - can use [] or length)
+stored is objects, not strings
+-------
+document.getElementsByTagName()
+var tags = document.getElementsByTagName("li");
+console.log(tags[0]);
+**by tag name, such as li, ul etc
+always return a list
+-------
+document.querySelector()
+Returns the first element that matches a given CSS-style selector
+#takes a css selector
+#always return the first one!! only one
+//select by ID -- css style
+var tag = document.querySelector("#highlight");
+//select by Class
+var tag = document.querySelector(".bolded");
+// another css selector eg
+var li = document.querySelector("li a.special");
+-if not exist -return null
+----
+document.querySelectorAll()
+Returns a list of elements that matches a given CSS-style selector
+//select by tag
+var tags = document.querySelectorAll("h1");

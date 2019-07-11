@@ -176,5 +176,28 @@ numInput.addEventListener("change", function(){
 	winningScore = Number(this.value);
 	reset();
 });
+--change event: any time the event changes
+--注意这时候this value是string，要变成num
 
+events MDN reference
 
+---todo list
+var lis = document.querySelectorAll("li");
+
+for(var i = 0; i < lis.length; i++){
+	lis[i].addEventListener("mouseover", function(){
+		this.classList.add("selected");
+	});
+
+	lis[i].addEventListener("mouseout", function(){
+		this.classList.remove("selected");
+	}); // when mouse is out
+
+	lis[i].addEventListener("click", function(){
+		this.classList.toggle("done");
+	});
+}
+
+--practice : use tr.len - table.len to get number of rows in a webpage
+
+document.querySelectorAll("tr").length-document.querySelectorAll("table").length

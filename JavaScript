@@ -351,4 +351,32 @@ colors.myForEach(function(color){
 	console.log(color);
 });
 
-13.JS objects
+13.JS OBJECTS (store data in key-value pairs)
+no order for objects
+to access the value: bracket and dot notation
+var person = {
+	name: "Travis"
+}
+console.log(person["name"])
+Or
+console.log(person.name)
+#you can't use . notation when property starts with a number Or there is space in the property!
+for the variables use [] 
+
+to update, just use these two ways to reassign it 
+objects can also store all types of data
+
+create objects:
+var person= {}
+person.name = "Traves";
+
+Or 
+
+var person = {
+name:"Traves"
+};   #pay attention to the place you put ;
+
+Or
+var person = new Object();
+person.name = "Traves";
+

@@ -144,3 +144,37 @@ for(var i =0; i <links.length; ++i) {
  links[i].style.color= "green" 
  }
 
+7.DOM events
+We select an element and then add an event listener
+"Listen for a click on this <button>"
+##addEventListener(type, functionToCall)
+element.addEventListener(event to listen!, functionToCall);
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+  console.log("SOMEONE CLICKED THE BUTTON!");
+});
+#we can have more than one listeners in one stuff
+for( ){
+this.style.color = "pink";
+}
+
+put the script at the end then it can load html first
+
+
+function reset(){
+	p1Score = 0;
+	p2Score = 0;
+	p1Display.textContent = 0;
+	p2Display.textContent = 0;
+	p1Display.classList.remove("winner");
+	p2Display.classList.remove("winner");
+	gameOver = false;
+}
+
+numInput.addEventListener("change", function(){
+	winningScoreDisplay.textContent = this.value;
+	winningScore = Number(this.value);
+	reset();
+});
+
+

@@ -62,3 +62,53 @@ document.querySelectorAll()
 Returns a list of elements that matches a given CSS-style selector
 //select by tag
 var tags = document.querySelectorAll("h1");
+
+4.manipulation -basic
+by styly property
+Style
+/SELECT
+var tag = document.getElementById("highlight");
+
+//MANIPULATE
+tag.style.color = "blue"; 
+# the second stuff has to be a string
+var h1 = xxxx;
+h1.style.border = "5px solid";
+not very good to use style for separation of concerns
+** better way:
+/*DEFINE A CLASS IN CSS*/
+.another-class {
+  color: purple;
+  fontSize: 76px;
+}
+var tag = document.querySelector("h1");
+tag.classList //[]
+//ADD A CLASS TO THE SELECTED ELEMENT
+tag.classList.add("another-class");
+
+//REMOVE A CLASS
+tag.classList.remove("another-class");
+
+//TOGGLE A CLASS - on then off, off then on
+tag.classList.toggle("another-class");
+
+
+5. text and content manip
+.textContent
+-- Returns a string of all the text contained in a given element
+--&& not include the tags
+<p>
+  This is an <strong>awesome</strong> paragraph 
+</p>
+/Select the <p> tag:
+var tag = document.querySelector("p");
+//Retrieve the textContent:
+tag.textContent //"This is an awesome paragraph"
+//alter the textContent:
+tag.textContent = "blah blah blah";
+
+.innerHTML -- will keep the tags
+//Select the <p> tag:
+var tag = document.querySelector("p");
+tag.innerHTML
+//"This is an <strong>awesome</strong> paragraph" --still have tags

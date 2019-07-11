@@ -97,6 +97,8 @@ tag.classList.toggle("another-class");
 .textContent
 -- Returns a string of all the text contained in a given element
 --&& not include the tags
+--and will treat what you give as a string
+
 <p>
   This is an <strong>awesome</strong> paragraph 
 </p>
@@ -106,9 +108,39 @@ var tag = document.querySelector("p");
 tag.textContent //"This is an awesome paragraph"
 //alter the textContent:
 tag.textContent = "blah blah blah";
-
-.innerHTML -- will keep the tags
+#tag.textContent = "<h1>blah </h1> ";
+# <h1>blah </h1> --on the screen
+.innerHTML -- will keep the inside tags 
 //Select the <p> tag:
 var tag = document.querySelector("p");
 tag.innerHTML
 //"This is an <strong>awesome</strong> paragraph" --still have tags
+#when you update it, it will overwrite it! 
+#tag.innerHTML = "<h1>blah </h1> ";
+#blah  --on the screen, will render the tag
+
+
+6.manip attributes
+Use getAttribute() and setAttribute() to read and write attributes like src or href
+(href = ""); (src="")
+
+<a href="www.google.com">I am a link</a>
+<img src="logo.png">
+var link = document.querySelector("a");
+link.getAttribute("href");  //"www.google.com"
+//CHANGE HREF ATTRIBUTE --(attribute name, what you want to change to)
+link.setAttribute("href","www.dogs.com"); 
+///<a href="www.dogs.com">I am a link</a>
+//TO CHANGE THE IMAGE SRC
+var img = document.querySelector("img");
+img.setAttribute("src", "corgi.png");
+//<img src="corgi.png">
+
+
+// change a lot with a loop
+var links = document.getElementsByTagName("a");
+for(var i =0; i <links.length; ++i) { 
+ links[i].style.background= "pink";
+ links[i].style.color= "green" 
+ }
+

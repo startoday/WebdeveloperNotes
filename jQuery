@@ -1,0 +1,12 @@
+1.what is jQuery? 
+a DOM manipulation library, just like other library in other language
+one of jQuery function : make HTTP requests(AJAX)
+also like cross-browser support
+
+2.CDN for jQuery
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+  

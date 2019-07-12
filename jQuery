@@ -66,3 +66,36 @@ text-xx:lineThrough;
 }
 $("p").addClass("correct") // can add multiple class same time
 $("li").toggleClass("done"); -- all the lis will toggle
+
+
+5.jQuery events
+
+click()
+$("button").click(function(){  // all buttons will change, not jQuery then you need a loop
+alert("haha, someone click the button");
+$(this).css("background","pink"); --pay attention to the "this" version in jQuery
+});
+
+keypress() # a way to add a keypress listener to elements, like .click() 
+--triggered when user type sth in the key board// keydown(press a key), keyup(release a key) indicate which key is pressed, 
+#keypress is more for what char is enter --shift+a -> keypress(A // the result) keydown(shift) maybe keyup(a)
+$('input').keypress(function(){
+alert("haha, you pressed a key");
+});
+$('input[type="text"]').keypress(function(){
+alert("haha, text input");
+});
+--do thing depends on which key is pressed // "which" each key has a code
+$('input').keypress(function(event){
+  if(event.which ===13){
+    alert("haha, you hit the enter");
+  }
+});
+
+
+on() * important,used 99% of the time, worked similarly to addEventListener. 
+#it lets you specify the type of event to listen for
+$("button").on('click', function(){  --click is the event you specify here, basically, any event
+alert("haha, someone click the button");
+});
+

@@ -61,4 +61,8 @@ color:green;
 .wrong{
 color:red;
 }
+.done{
+text-xx:lineThrough;
+}
 $("p").addClass("correct") // can add multiple class same time
+$("li").toggleClass("done"); -- all the lis will toggle

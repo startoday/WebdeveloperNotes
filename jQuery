@@ -181,3 +181,8 @@ $("input[type='text']").keypress(function(event){
 $(this).val(""); //clear the input window
 		//$(this).val() = ""; //wrong way to use the setter .val() is a getter
 
+
+//use a parent-when it not exist(not loaded) still work
+$("ul").on("click","li", function(){
+	$(this).toggleClass("completed");
+})

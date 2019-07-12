@@ -9,4 +9,42 @@ also like cross-browser support
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   
-  
+3.use $() ti select
+ $("img") -- return a list even if only one element
+ $("#bouns") 
+CSS selector ($ is a function)
+
+.css(property, value)
+$("h1").css("color", "yellow");
+var styles = {
+some set up
+}
+$("h1").css(style); (all things in style will be appied
+-- also can select multiple elements at once 
+if not jQuery, we need to use a var to store and use a loop with length to change it 
+
+put the script in the head ( adding jQuery first) and also the script (like js) at end of body
+//selectt the first div only and change the color to pink; remember the CSS selector we talked about before
+$("div:first-of-type").css("color","pink");
+
+4.some jQuery methods
+text() #like the jQuery version of textContent in js (without tags)
+$("h1").text("new text!")  // change h1 text to new text! (usually treat user input as text)
+
+html() #get the html() -- the innerHtml (with tags)
+$("h1").html("<li>new text!</li>")
+
+attr() # get the value of an attribute for the first element in the set of matched elements 
+# or set one or more attributes for every matched element (retrive/ set attribute)
+$("img").attr("getter - old  attribute for updation", "setter -new trribute to update")
+$("img").attr("width", "500px")
+$("input").attr("type", "color")
+--will change all stuff qualified --first - use : first-of-type
+$("img").last().attr("width", "500px") //only change last
+
+val() # get the current value of the first element in the set of matched elements or set the value of every matched element
+--value() for js
+$("input").val();
+$("input").val("rustyle"); -- change it!
+--when to use it? to clear/reset stuff like for the to do list
+

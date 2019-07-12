@@ -201,3 +201,7 @@ for(var i = 0; i < lis.length; i++){
 --practice : use tr.len - table.len to get number of rows in a webpage
 
 document.querySelectorAll("tr").length-document.querySelectorAll("table").length
+
+use 
+style.backgroundColor, other than style.background so that it can work on all browsers
+

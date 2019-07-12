@@ -147,4 +147,37 @@ $("li").on("click", function(){
 	}
 })
 
--- change it into $(this).toggleClass("completed");
+-- change it into 
+$("li").on("click", function(){
+	$(this).toggleClass("completed");
+})
+in css file:
+.completed { 
+	color : red;
+	text-decoration:line-through;
+}
+
+an event will bubble up automatically
+use event.stopPropagation();
+use this to also remove the parent tag (the li)
+$(this).parent().remove(); 
+
+# $(this).parent().fadeOut(500, remove); not work, need to have an object for remove-- remove is not defined
+# $(this).parent().fadeOut(500, $(this).remove()); --only remove x, the remove is still for first this
+
+$("input[type='text']").keypress(function(){
+	console.log("key");
+});
+###注意这个里面的text不能用双引号了！ 会造成error
+
+$("input[type='text']").keypress(function(event){
+	if(event.which === 13){
+		console.log($(this).val()); // remeber the this mean "input[type='text']"
+		//thus is going to return everything till enter
+	}
+});
+
+
+$(this).val(""); //clear the input window
+		//$(this).val() = ""; //wrong way to use the setter .val() is a getter
+

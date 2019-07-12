@@ -47,4 +47,18 @@ val() # get the current value of the first element in the set of matched element
 $("input").val();
 $("input").val("rustyle"); -- change it!
 --when to use it? to clear/reset stuff like for the to do list
+//if there is a drop down menu and you want to know what user select
+$("selector") // select the select tag
+$("selector").val(); --tell you what user select
 
+addClass()
+removeClass()
+toggleClass() -- add it if not have, remove if have 
+
+.correct{
+color:green;
+}
+.wrong{
+color:red;
+}
+$("p").addClass("correct") // can add multiple class same time

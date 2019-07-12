@@ -124,5 +124,6 @@ $("button").on("click", function(){
 
 .slideDown() --like PPT's slideDown
 
-
+7.folder structure
+lib for extend codes in js folder (asset - js, css  | html)
 

@@ -99,3 +99,30 @@ $("button").on('click', function(){  --click is the event you specify here, basi
 alert("haha, someone click the button");
 });
 
+$('input').on('keypress', function(event){
+  if(event.which ===13){
+    alert("haha, you hit the enter");
+  }
+});
+
+##one thing to remember use $(this) to use the js this! it need a js object
+****why you need on()? the difference between on() and click()?
+click()only adds listeners for existing elements
+on()will add listeners for all potential future elements -- such as a to do list, you click a mouse to triggle to have new things
+
+6. jQuery effects
+.fadeOut(duration, completed call back -- a function, eg the next example ,if remove is out the function(){} it is immediately gone)
+--just hiding them, not delete, with that remove, will delete
+
+$("button").on("click", function(){
+ $('div').slideToggle(1000, function(){
+ 	$(this).remove(); --- so this one will only run after the fade out finished!, the stuff is gone from the remove function
+ });
+});
+
+.fadeToggle() depends on current status
+
+.slideDown() --like PPT's slideDown
+
+
+

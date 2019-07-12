@@ -127,3 +127,24 @@ $("button").on("click", function(){
 7.folder structure
 lib for extend codes in js folder (asset - js, css  | html)
 
+$("li").on("click", function(){
+	// $(this).css("color","red");
+	// $(this).css("text-decoration","line-through");
+	//change the color back
+	if($(this).css("color") === "rgb(255, 0, 0)"){
+		$(this).css({
+		color:"black", // comma in between
+		// text-decoration:"line-through" //Unexpected token - not use this 
+		textDecoration:"none" // have to use camelCase
+	});
+	}
+	else {
+		$(this).css({
+		color:"Red", // comma in between
+		// text-decoration:"line-through" //Unexpected token - not use this 
+		textDecoration:"line-through" // have to use camelCase
+	});
+	}
+})
+
+-- change it into $(this).toggleClass("completed");

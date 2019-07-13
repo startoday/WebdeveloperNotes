@@ -186,3 +186,8 @@ $(this).val(""); //clear the input window
 $("ul").on("click","li", function(){
 	$(this).toggleClass("completed");
 })
+
+
+8 canvas element -- can do animation stuff on canvas, not a body/background
+<script type="text/javascript" src="paper-full.js"></script> -- use a paper js lib
+the canvas is in <head>

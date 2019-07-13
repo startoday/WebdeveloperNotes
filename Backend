@@ -1,0 +1,13 @@
+1. a generic stack:
+
+backend language /app      server(framework)     database
+---------------------------------------------------------
+HTML  JS CSS        -->         a website(such as google)
+
+
+stack share can tell you the information of a company
+
+for get you usually ask info but for get you can still send infor (such as search)
+from the browser search bar, you can only make get request
+
+the term you send will doing the search -a query string

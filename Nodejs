@@ -1,1 +1,5 @@
+1.what is node?
+Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+npm is node.js's package ecosystem, which is the largest one of open source libraries
+--we can run js on the server side
 

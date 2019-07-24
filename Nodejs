@@ -3,3 +3,10 @@ Node.js uses an event-driven, non-blocking I/O model that makes it lightweight a
 npm is node.js's package ecosystem, which is the largest one of open source libraries
 --we can run js on the server side
 
+2. to exit node: hit ctrl C twice
+into node: type "node"
+then you will have a similar javascript
+but some won't work, such as alert(), document(), which are on the browser
+
+run a file with node(use js in a console instead of a browser)
+---node<filename>

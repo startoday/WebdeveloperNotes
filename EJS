@@ -3,4 +3,34 @@ res.render("dog.ejs");
 //ejs stands for embedded javaScript
 have to make another directory called "views" --only this name works
 
+first npm install ejs --save
+//create a new file:
+views/result.ejs
+---
+res.render("result.ejs");
+---
+<%=   anything inside it will be treated as java script %>
+--in ejs
+<p>
+	this is what you said : <%= thingVar %>
+</p>
+
+--in app.js
+app.get("/repeat/:word",function(req, res){
+	console.log(req.params);
+	var word = req.params.word;
+	res.render("result.ejs",{thingVar: word});  // you can have multiple pairs
+});
+
+******
+<%= %> //what we have in between will be render into the html page
+<%  logic %> //logic won't be show in the file
+
+<% for(var i = 0;i < posts.length; i++) {  %>
+  <li>
+    <%= posts[i].title%>  - <strong> <%= posts[i].author %> </strong>
+  </li>
+<%> } <%>
+
+
 2.dynamic html files -- templates

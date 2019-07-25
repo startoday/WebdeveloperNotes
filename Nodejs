@@ -10,3 +10,16 @@ but some won't work, such as alert(), document(), which are on the browser
 
 run a file with node(use js in a console instead of a browser)
 ---node<filename>
+
+
+3.Math.round(avg); will round depends on decimal instead of always chop the stuff
+
+4.NPM
+-is node.js's package ecosystem, which is the largest one of open source libraries
+use npm install to install a package   npm install cat-me     -->node_modules/ will be created
+use require() to include a package
+var something = require("cat-me")  // call it: something()
+
+
+
+

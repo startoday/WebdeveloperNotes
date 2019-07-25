@@ -47,11 +47,19 @@ app.listen(process.env.PORT,process.env.IP, function(){
 	console.log("server has started!");
 });
 
-8. --save
+8. package.json  &&  --save
 .json file is like a recipe to store all the info needed, not store all real needed stuff
 use npm init to create a new package json -- put it in the folder you put app
-use the -- save flag to install packages and save the dependency on json file
+use the -- save flag to install packages and save the dependencies on json file
 entry point is the main file if you type it manully
+***
+While creating a new node project with npm init, be sure not to name the project 
+(or the folder that the project lives inside of) the same as any of the node packages being used in the project itself
+****
+Project names need to be all lowercase and contain url friendly characters, e.g., no spaces, instead use a hyphen.
+*****
+npm install --save <package name>
+
 
 9.nodemon
 auto matically restart your server when you change the server file( otherwise you need to ctlr C yourself)
@@ -92,3 +100,61 @@ in the console: { subredditName: 'what', id: '1', title: '2341' }  --all strings
 
 12. convert string into int in js
 https://stackoverflow.com/questions/1133770/convert-a-string-to-an-integer-in-javascript
+you can only use send once, it only send one thing back
+
+13.exercise solution
+var express = require("express");
+var app = express();
+
+app.get("/",function(req, res){
+	res.send("hi there, welcome to my assignment");
+});
+
+app.get("/repeat/:word/:times",function(req, res){
+	console.log(req.params);
+	var repeat = "";
+	var word = req.params.word;
+	var times = req.params.times;
+	var time = Math.round(times);
+	for(var i = 0; i < time -1; i++) {
+		repeat += word +" ";
+	}
+	repeat += word;
+	res.send(repeat);
+});
+
+app.get("/speak/:animal",function(req, res){
+	console.log(req.params);
+	var sounds = {
+		pig : "Oink", 
+		cow : "Moo",	
+		dog : "woof"	
+	};
+	
+	var ani = req.params.animal.toLowerCase();
+	var sound = sounds[ani];
+	//if not included, won't crash, it will only returns undefined
+	/*
+	var sound = "#^%*^&";
+	if(ani === "pig") {
+		sound = "Oink";
+	}
+	if(ani === "cow") {
+		sound = "Moo";
+	}
+	if(ani === "dog") {
+		sound = "Woof Woof!";
+	}
+	*/
+	res.send("The " +ani + " says '" + sound + "'");
+});
+
+app.get("*",function(req, res){
+	console.log("some one request to *!");
+	res.send("sorry page not found");
+});
+
+app.listen(3000, function() { 
+  console.log('Server listening on port 3000'); 
+});
+

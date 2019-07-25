@@ -10,3 +10,25 @@ programmableWeb -- search all kins of apis
 API's don't respond with HTML, the structure information, API's respond with data, not structure
 They use simpler data formats like XML and JSON
 
+3. XML (extened markup language)
+syntacticly similar to HTML, but it does not describe presentation like HTML does (strong, bold, stuff)
+eg:
+<person>
+  <age>21</age>
+  <name>King</name>
+  <city>seattle</city>
+</person>
+
+
+4.JSON (javascript object notation)
+JSON looks exactly like JS objects, but everything is a string
+"key" :"val"
+eg: (same infor as xml
+{
+"person" :{
+    "age" : "21",
+    "name" : "King",
+    "city": "seattle"
+    }
+}
+

@@ -59,7 +59,33 @@ use npm -i g nodemon   //first, i -install, g  global will search your files
 the main file in your json file should be the app.js you want to run
 
 
+10. wild card.. make sure this one will be the last! ,hold every else input
+app.get("*",function(req, res){
+	console.log("some one request to *!");
+	res.send("you are start");
+});
 
 
+11.route parameters
+app.get("/r/:subredditName");  ---not typing different things/branches a thousand times
+app.get("/r/:subredditName/comments/:id/:title"); //respond also have the same pattern
+
+put : on any variable
+****
+https://goorm-ide-test-lhgra.run.goorm.io/r/what  // go to sub stuff
+https://goorm-ide-test-lhgra.run.goorm.io/r/what/oteghr  //--go to *
+https://goorm-ide-test-lhgra.run.goorm.io/r/what/comments/1/2 //go to comments
+https://goorm-ide-test-lhgra.run.goorm.io/r/what/comments/1  // go to *
+****
+
+app.get("/r/:subredditName/comments/:id/:title",function(req, res){
+	console.log(req.params);
+	var subreddit = req.params.subredditName;
+	res.send("You are in a " + subreddit.toUpperCase() + " comments");
+});
+
+// https://goorm-ide-test-lhgra.run.goorm.io/r/what/comments/1/2341
+--You are in a WHAT comments
+in the console: { subredditName: 'what', id: '1', title: '2341' }
 
 

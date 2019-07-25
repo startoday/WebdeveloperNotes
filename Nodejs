@@ -86,6 +86,8 @@ app.get("/r/:subredditName/comments/:id/:title",function(req, res){
 
 // https://goorm-ide-test-lhgra.run.goorm.io/r/what/comments/1/2341
 --You are in a WHAT comments
-in the console: { subredditName: 'what', id: '1', title: '2341' }
+in the console: { subredditName: 'what', id: '1', title: '2341' }  --all strings
 
 
+12. convert string into int in js
+https://stackoverflow.com/questions/1133770/convert-a-string-to-an-integer-in-javascript

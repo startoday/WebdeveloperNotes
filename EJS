@@ -38,5 +38,17 @@ use link tage to link styles
 <link rel = "stylesheet" href="app.css">  // usually folder called public and you don't need to type in the css folder name -- say it in .js
 app.use(express.static("public")); // in js file, after  app = express()
 
-
 app.set("view engine", "ejs"); //then you don't to include.ejs in the file name
+
+
+3.post request
+app.post("/addfriend", function(req,res){
+	res.send("you are at the post rount");
+});
+
+
+npm install body-parser --save
+
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: true}));

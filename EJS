@@ -34,3 +34,9 @@ app.get("/repeat/:word",function(req, res){
 
 
 2.dynamic html files -- templates
+use link tage to link styles
+<link rel = "stylesheet" href="app.css">  // usually folder called public and you don't need to type in the css folder name -- say it in .js
+app.use(express.static("public")); // in js file, after  app = express()
+
+
+app.set("view engine", "ejs"); //then you don't to include.ejs in the file name

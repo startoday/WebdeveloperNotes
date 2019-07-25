@@ -51,6 +51,7 @@ app.listen(process.env.PORT,process.env.IP, function(){
 .json file is like a recipe to store all the info needed, not store all real needed stuff
 use npm init to create a new package json -- put it in the folder you put app
 use the -- save flag to install packages and save the dependency on json file
+entry point is the main file if you type it manully
 
 9.nodemon
 auto matically restart your server when you change the server file( otherwise you need to ctlr C yourself)

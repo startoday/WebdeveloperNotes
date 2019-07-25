@@ -1,3 +1,12 @@
 1.API
 application programming interface
 interface for code/computers to talk to one another
+
+IFTTT  connect APIs
+programmableWeb -- search all kins of apis
+
+
+2.when we use the internet, we make HTTP request and get HTML back.
+API's don't respond with HTML, the structure information, API's respond with data, not structure
+They use simpler data formats like XML and JSON
+

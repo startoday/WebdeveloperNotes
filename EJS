@@ -41,7 +41,7 @@ app.use(express.static("public")); // in js file, after  app = express()
 app.set("view engine", "ejs"); //then you don't to include.ejs in the file name
 
 
-3.post request
+3.post request  --body parser
 app.post("/addfriend", function(req,res){
 	res.send("you are at the post rount");
 });
@@ -52,3 +52,21 @@ npm install body-parser --save
 var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
+
+
+4. redirect to the old page
+
+app.post("/addfriend", function(req,res){
+	console.log(req.body);
+	var newFriend = req.body.newFriend;
+	friends.push(newFriend);
+	//res.send("you are at the post rount");
+	res.redirect("/friend");
+});
+
+<form action ="/addfriend" method="POST">
+	<input type = "text" name= "newFriend" placeholder = "name">  //the name will be the variable name
+	<button>
+		 I made a new friend!
+	</button>
+</form>

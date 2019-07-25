@@ -1,0 +1,2 @@
+1. pkill -9 -ef node
+to shut down the port

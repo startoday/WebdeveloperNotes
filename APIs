@@ -8,7 +8,7 @@ programmableWeb -- search all kins of apis
 
 2.when we use the internet, we make HTTP request and get HTML back.
 API's don't respond with HTML, the structure information, API's respond with data, not structure
-They use simpler data formats like XML and JSON
+They use simpler data formats like XML and JSON (they are both format)
 
 3. XML (extened markup language)
 syntacticly similar to HTML, but it does not describe presentation like HTML does (strong, bold, stuff)
@@ -32,3 +32,21 @@ eg: (same infor as xml
     }
 }
 
+5. curl: to make request from the cmd line
+make request of API use node
+https://github.com/request/request
+
+npm install request  //--not require
+
+
+var request = require('request');
+request('http://www.google.com', function (error, response, body) {
+  if(error){
+	  console.log("some error");
+	  console.log(error);
+  } else {
+	  if(response.statusCode == 200) {
+		 console.log(body); //things worked!
+	  }
+  }
+});  //404 is also a status code, 200 :OK

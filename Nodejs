@@ -20,6 +20,46 @@ use npm install to install a package   npm install cat-me     -->node_modules/ w
 use require() to include a package
 var something = require("cat-me")  // call it: something()
 
+5. difference between a library and a framework: inversion of control
+you calls the library and a frame work calls you 
+
+Express: a framework for web develop framework, light framework, you doing and seeing more seeings
+
+
+6. in groome IDE
+Option A: 
+Change your app.listen code to look like this:
+
+app.listen(3000, function() { 
+  console.log('Server listening on port 3000'); 
+});
+Option B: 
+Leave the app.listen code how Colt does it in the lecture, but start your app with this command: PORT=3000 node app.js
+
+
+7.routes:
+we listen to a port and respond the request
+function(request,respons) ==>store the request made and respond sent
+app.listen(process.env.PORT,process,env.IP);
+//env stands for environment --not work for groom IDE, use the 3000 one
+
+app.listen(process.env.PORT,process.env.IP, function(){
+	console.log("server has started!");
+});
+
+8. --save
+.json file is like a recipe to store all the info needed, not store all real needed stuff
+use npm init to create a new package json -- put it in the folder you put app
+use the -- save flag to install packages and save the dependency on json file
+
+9.nodemon
+auto matically restart your server when you change the server file( otherwise you need to ctlr C yourself)
+just run nodemon instead of node app.js
+use npm -i g nodemon   //first, i -install, g  global will search your files
+the main file in your json file should be the app.js you want to run
+
+
+
 
 
 

@@ -25,3 +25,7 @@ echo 'mongod --dbpath=data --nojournal' > mongod
 
 chmod a+x mongod
 
+---exit mongo shell 
+---Ctrl C to exit mongodb
+---./mongodb if it is in the same file folder, if not then will just be mongodb
+

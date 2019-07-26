@@ -116,3 +116,87 @@ So everything is exactly the same as Colt explains in the following videos,
 except you must append &apikey=thewdb to the end of your url.
 
 Keep me posted with any questions.
+
+
+
+
+
+
+7. movie search app
+file : in views  movie_result.ejs , search.ejs
+in .. folder movieSearch.js
+package dependency: 
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+  
+  
+===================
+movie_result.ejs 
+===================
+ <h1>
+	result is here!
+</h1>
+<ul>
+	<%  data["Search"].forEach(function(movie) { %>
+		<li>
+			<strong>
+				<%= movie["Title"] %>
+			</strong>
+			- <%= movie["Year"] %>	
+		</li>		
+	<%	} ) %>	
+
+</ul>
+
+<a href ="/"> Search Again!
+</a>
+
+
+===================
+search.ejs 
+===================
+
+<h1>
+Search for a movie!	
+</h1>
+
+<form action="/results" method = "GET">
+	<input type = "text" name = "search" placeholder = "search term">
+	<input type = "submit">
+</form>	
+
+
+
+===================
+movieSearch.js
+===================
+var express = require("express");
+var app = express();
+var request = require('request');
+
+app.use(express.static("public"));
+app.set("view engine", "ejs"); 
+
+app.get("/", function(req,res){
+	res.render("search");
+});
+
+app.get("/results",function(req, res){
+	var query = req.query.search;
+	var url = 'http://www.omdbapi.com/?s=' + query +'&apikey=thewdb';
+	request(url, function (error, response, body) {
+	if(!error && response.statusCode == 200){ //hang up for the respond
+		var data = JSON.parse(body);
+		res.render("movie_result", {data:data});
+	}
+}); 
+});
+
+
+
+app.listen(3000, function(){ 
+  console.log('Server listening on port 3000'); 
+});

@@ -1,1 +1,27 @@
+1. what is database?
+  a collection of information/data
+  has an interface
+ 
+eg: db.dogs.select()
+
+2. SQL(relational databases) vs NoSQL (non relational databases)
+SQL:是一个table， 列是user store 的信息，行是user id， 每个位置都是填写的固定的东西， 以及comments，通过user id 连接起来 （是一个 joint table，
+不是user table 和 comment table id完全一样的）
+
+non-SQL, 像JS，flexiable
+
+3.install Mango DB
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+
+mkdir data
+
+echo 'mongod --dbpath=data --nojournal' > mongod
+
+chmod a+x mongod
 

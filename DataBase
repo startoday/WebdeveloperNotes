@@ -8,7 +8,7 @@ eg: db.dogs.select()
 SQL:是一个table， 列是user store 的信息，行是user id， 每个位置都是填写的固定的东西， 以及comments，通过user id 连接起来 （是一个 joint table，
 不是user table 和 comment table id完全一样的）
 
-non-SQL, 像JS，flexiable
+non-SQL, 像JS，flexiable --mongodb: MEN, most popular ( Mongo Expressed Node)
 
 3.install Mango DB
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4

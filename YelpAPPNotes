@@ -193,3 +193,23 @@ app.get("/campgrounds", function(req,res){
 					});
 	//res.render("campgrounds",{campgrounds:campgrounds});  -- old version :retrive from local array
 });
+
+
+//corresponding post route
+//CREATE route
+app.post("/campgrounds", function(req,res){
+	//get data and add
+	var name = req.body.name;
+	var image = req.body.image;
+	var newCampground = {name:name, image:image};
+	//campgrounds.push(newCampground);  //also old version
+	Campground.create(newCampground,function(err, allCampgrounds){  
+		if(err){
+			console.log(err);
+			console.log("sth is wrong");
+		} else {
+			res.redirect("/campgrounds"); //pay attention to allCam = oldcamp
+		}
+	});
+	res.redirect("/campgrounds");
+});

@@ -117,4 +117,7 @@ db.campgrounds.find()
 ---
 > db.campgrounds.remove({name:"Salmon Creek"})
 WriteResult({ "nRemoved" : 6 })
-
+--eg:
+{ "_id" : ObjectId("5d3e205bf24b961349ad5766"), "name" : "cloud's rest", "image" : "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg",
+ "__v" : 0 }
+> db.campgrounds.remove({name:"cloud's rest"})

@@ -1,0 +1,183 @@
+************
+*    V1    *
+************
+
+--index.js
+var express = require("express");
+var app = express();
+var request = require('request');
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+app.set("view engine", "ejs"); 
+
+var campgrounds = [
+		{name :"Salmon Creek", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"},
+		{name :"Heart Hill", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"},
+		{name :"Double mounatin", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"}
+	];
+
+app.get("/", function(req,res){
+	res.render("landing");
+});
+
+app.get("/campgrounds", function(req,res){
+
+	res.render("campgrounds",{campgrounds:campgrounds});
+});
+
+app.post("/campgrounds", function(req,res){
+	//get data and add
+	var name = req.body.name;
+	var image = req.body.image;
+	var newCampground = {name:name, image:image};
+	campgrounds.push(newCampground);
+	//rediect back
+	res.redirect("/campgrounds");
+});
+
+app.get("/campgrounds/new", function(req,res){
+
+	res.render("new");
+});
+
+
+
+
+
+/*
+app.get("/results",function(req, res){
+	var query = req.query.search;
+	var url = 'http://www.omdbapi.com/?s=' + query +'&apikey=thewdb';
+	request(url, function (error, response, body) {
+	if(!error && response.statusCode == 200){ //hang up for the respond
+		var data = JSON.parse(body);
+		res.render("movie_result", {data:data});
+	}
+}); 
+});
+
+*/
+
+app.listen(3000, function(){ 
+  console.log('Server listening on port 3000'); 
+});
+
+
+
+----campgrounds.ejs
+<% include partials/header %>
+<div class = "container">
+	
+
+	<header class = "jumbotron">
+		<div class = "container"> 
+			<h1>
+			Welcome to YelpCamp!
+			</h1>
+			<p>
+				View our hand-picked campgrounds from all over the world
+			</p>
+			<p>
+				<a class = "btn btn-primary btn-lg"  href="/campgrounds/new">Add New Campgrounds</a>
+			</p>
+		</div>
+	</header>
+
+	<div class = "row text-center">
+		<%  campgrounds.forEach(function(campground) { %>
+			<div class = "col-md-3 col-sm-6">
+				<div class = "thumbnail">
+					<img src = " <%=  campground.image %> ">
+					<div class = "caption">
+						<h4>
+							<%= campground.name %>
+						</h4>
+				
+					</div>
+				</div>
+			</div>		
+		<%	} ) %>	
+	</div>
+
+	
+
+
+</div>
+<% include partials/footer %>
+
+
+
+------new.ejs
+<% include partials/header %>
+<div class= "container">
+	<div class = "row">
+		<h1>
+		Create a new campground!
+		</h1>
+
+		<form action = "/campgrounds" method ="POST">
+		<input class = "form-control" type = "text" name = "name" placeholder = "name">
+		<input class = "form-control" type = "text" name = "image" placeholder = "img url">
+		<button class= "btn btn-lg btn-default">
+		Submit!
+		</button>
+		</form>
+
+		<a href="/campgrounds">Go Back to the CampGrounds</a>
+		
+	</div>
+	
+</div>
+
+
+<% include partials/footer %>
+
+
+
+-----landing.ejs
+<% include partials/header %>
+<h1>
+	Landing page!
+</h1>
+<p>
+	Welcome to YelpCamp
+</p>
+<p>
+	<a href="/campgrounds/new">Add New Campgrounds</a>
+</p>
+
+<a href="/campgrounds">View All Campgrounds</a>
+
+<% include partials/footer %>
+
+
+
+---package json
+
+{
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
+
+
+
+
+
+
+***************
+*      v2     *
+***************

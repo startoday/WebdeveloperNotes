@@ -181,3 +181,15 @@ app.listen(3000, function(){
 ***************
 *      v2     *
 ***************
+app.get("/campgrounds", function(req,res){
+	//get all campground from db
+	Campground.find({},function(err, allCampgrounds){  --retrive data from db
+					if(err){
+		console.log(err);
+		console.log("sth is wrong");
+	} else {
+		res.render("campgrounds",{campgrounds: allCampgrounds}); //pay attention to allCam = oldcamp
+	}
+					});
+	//res.render("campgrounds",{campgrounds:campgrounds});  -- old version :retrive from local array
+});

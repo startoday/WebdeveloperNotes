@@ -203,7 +203,7 @@ app.post("/campgrounds", function(req,res){
 	var image = req.body.image;
 	var newCampground = {name:name, image:image};
 	//campgrounds.push(newCampground);  //also old version
-	Campground.create(newCampground,function(err, allCampgrounds){  
+	Campground.create(newCampground,function(err, newlyCreated){  
 		if(err){
 			console.log(err);
 			console.log("sth is wrong");

@@ -29,3 +29,13 @@ chmod a+x mongod
 ---Ctrl C to exit mongodb
 ---./mongod if it is in the same file folder, if not then will just be mongod
 
+4.cmds
+mongod
+mongo
+help
+show dbs
+use
+insert
+find  
+update
+remove

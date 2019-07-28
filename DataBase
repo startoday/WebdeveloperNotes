@@ -108,3 +108,13 @@ name:xxx  // u can send less than 3, won't crash
 
 
 
+6.sequence of check db
+mongo
+show dbs
+use yelpCamp
+show collections
+db.campgrounds.find()
+---
+> db.campgrounds.remove({name:"Salmon Creek"})
+WriteResult({ "nRemoved" : 6 })
+

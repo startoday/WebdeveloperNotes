@@ -7,7 +7,7 @@ var request = require('request');
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/yelpCamp", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/yelpCamp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs"); 
@@ -19,7 +19,7 @@ var campgroundSchema = new mongoose.Schema({
 });
 
 var Campground = mongoose.model("Campground", campgroundSchema);
-
+/*
 Campground.create(
 	{
 		name :"Salmon Creek", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"
@@ -31,25 +31,32 @@ Campground.create(
 			console.log(campground);
 		}
 	});
+*/
 
-
+/*
 var campgrounds = [
 		{name :"Salmon Creek", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"},
-		{name :"Heart Hill", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"},
-		{name :"Double mounatin", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"}
+		{name :"Heart Hill", image: "https://cdn.pixabay.com/photo/2017/08/17/08/08/camp-2650359_960_720.jpg"},
+		{name :"Double mounatin", image: "https://cdn.pixabay.com/photo/2014/11/27/18/36/tent-548022__340.jpg"}
 	];
-
+*/
 app.get("/", function(req,res){
 	res.render("landing");
 });
 
-
 // index routes
 app.get("/campgrounds", function(req,res){
-
-	res.render("campgrounds",{campgrounds:campgrounds});
+	//get all campground from db
+	Campground.find({},function(err, allCampgrounds){  
+					if(err){
+		console.log(err);
+		console.log("sth is wrong");
+	} else {
+		res.render("campgrounds",{campgrounds: allCampgrounds}); //pay attention to allCam = oldcamp
+	}
+	});
+	
 });
-
 
 //CREATE route
 app.post("/campgrounds", function(req,res){
@@ -57,9 +64,16 @@ app.post("/campgrounds", function(req,res){
 	var name = req.body.name;
 	var image = req.body.image;
 	var newCampground = {name:name, image:image};
-	campgrounds.push(newCampground);
-	//rediect back
-	res.redirect("/campgrounds");
+	//campgrounds.push(newCampground);  //also old version
+	Campground.create(newCampground,function(err, newlyCreated){  
+		if(err){
+			console.log(err);
+			console.log("add failed");
+		} else {
+			console.log("add succeed");
+			res.redirect("/campgrounds"); //pay attention to allCam = oldcamp
+		}
+	});
 });
 
 
@@ -75,10 +89,7 @@ app.get("/campgrounds/:id", function(req,res){
 });
 
 
-
 app.listen(3000, function(){ 
-  console.log('Server listening on port 3000'); 
+  	console.log('Server listening on port 3000'); 
+	console.log('Yelp Camp server has started!'); 
 });
-
-
-

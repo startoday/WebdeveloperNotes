@@ -107,6 +107,7 @@ name:xxx  // u can send less than 3, won't crash
 });
 
 
+*** use db.collection.drop() to drop all stuff in that collection  -return true means worked!
 
 6.sequence of check db
 mongo

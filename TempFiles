@@ -15,24 +15,28 @@ app.set("view engine", "ejs");
 //sehema setup
 var campgroundSchema = new mongoose.Schema({
 	name: String,
-	image: String
+	image: String,
+	description:String
 });
 
 var Campground = mongoose.model("Campground", campgroundSchema);
+
 /*
 Campground.create(
 	{
-		name :"Salmon Creek", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"
+		name :"Salmon Creek", 
+		image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg",
+		description: "this is a hard trail with a lot of rocks"
 	}, function(err,campground) {
 		if(err) {
 			console.log(err);
 		} else {
-			console.log("NEW");
+			console.log("NEW camp added!");
 			console.log(campground);
 		}
 	});
-*/
 
+*/
 /*
 var campgrounds = [
 		{name :"Salmon Creek", image: "http://il9.picdn.net/shutterstock/videos/11865671/thumb/1.jpg"},
@@ -85,6 +89,8 @@ app.get("/campgrounds/new", function(req,res){
 
 //SHOW route
 app.get("/campgrounds/:id", function(req,res){
+	//find the campground with provided ID
+	//render show template with that campground
 	res.send("This will be the show page one day");
 });
 

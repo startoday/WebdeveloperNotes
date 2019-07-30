@@ -1,4 +1,4 @@
-1.RESTful Routes
+1.RESTful Routes total:7 
 
 name       url        verb      description
 =========================================================
@@ -8,3 +8,16 @@ CREATE     /dogs       POST     Add new dog to DB
 SHOW       /dogs/:id   GET      Show informatio about one dog
 
     
+2. what is REST
+A pattern to define a routes
+REST- a mapping between HTTP routes and CRUD
+
+INDEX       /blogs
+NEW         /blogs/new          get
+CREATE      /blogs              post
+SHOW        /blogs/:id 
+EDIT        /blogs/:id/edit     get
+UPDATE      /blogs/:id          put
+DESTORY     /blogs/:id          delete
+
+

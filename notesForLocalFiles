@@ -11,3 +11,9 @@ app.listen(port, function () {
   console.log("Server Has Started!");
 });
 Then, you will be able to preview your app by going into your browser and typing localhost:3000 in the address bar.
+
+
+4. CSS  peek
+in VS code
+select cursor press F2
+F2+option gives you a peek window you can just change, don't even need to change the window

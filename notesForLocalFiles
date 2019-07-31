@@ -1,0 +1,13 @@
+1.https://github.com/nvm-sh/nvm#install-script
+
+2.
+https://zarkom.net/blogs/mac-local-coding-environment-6283
+
+3.
+Instead of using Colt’s app.listen() code in your apps, make sure to set it up like this:
+
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server Has Started!");
+});
+Then, you will be able to preview your app by going into your browser and typing localhost:3000 in the address bar.

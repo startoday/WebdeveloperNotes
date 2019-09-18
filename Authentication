@@ -14,3 +14,7 @@ npm install ejs --save
 
 
 4.open mongod before use mongo(shell)
+show dbs
+use xx db
+show collections
+db.user.find()

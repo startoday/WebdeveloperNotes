@@ -1,0 +1,16 @@
+app.use(express.static(_ _dirname + "/public")); 
+a way to find the folder
+
+2.password.js
+passport local
+passport local mongoose
+
+3. cmd codes:
+npm install express mongoose --save
+npm install passport passport-local --save
+npm install passport-local-mongoose --save
+npm install body-parse express-session --save
+npm install ejs --save
+
+
+4.open mongod before use mongo(shell)

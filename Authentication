@@ -18,3 +18,9 @@ show dbs
 use xx db
 show collections
 db.user.find()
+
+5. Associate username and comment
+store infor in comment ->only can do NoSql like MongoDb
+
+flash message: see once, f5 then disappear
+

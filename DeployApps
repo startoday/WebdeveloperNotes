@@ -1,3 +1,10 @@
 reason to deploy it?
 A. more place can use
 B. when you need to update/debug your version, you can't just stop it every time
+
+1.We are using Heroku
+--free!
+running on someone else's server
+make our applications on that server
+
+

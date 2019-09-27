@@ -4,3 +4,6 @@
         <div class="form-group">
                     <input class="form-control" type="number" name="price" placeholder="price" min = "0.01" step = "0.5">
                 </div>
+
+
+2.git is a technology, git hub is an application

@@ -1,0 +1,6 @@
+	1. adding dynamic price, need to use type = number, store as string so it will preserve what it looks like
+    min is the min and step is how much we can increase as step
+        
+        <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="price" min = "0.01" step = "0.5">
+                </div>
